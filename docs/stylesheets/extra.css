@@ -1,0 +1,105 @@
+/* =========================================================
+   NEURAL / TECH THEME — Material for MkDocs
+   ========================================================= */
+
+/* ---------- Цветовая база под логотип ---------- */
+:root {
+  /* Основные цвета */
+  --md-primary-fg-color: #0B57D0;
+  --md-primary-fg-color--light: #36C8FF;
+  --md-primary-fg-color--dark: #083A8C;
+
+  /* Акценты */
+  --md-accent-fg-color: #36C8FF;
+  --md-accent-fg-color--transparent: rgba(54, 200, 255, 0.15);
+
+  /* Текст под светлый фон */
+  --md-default-bg-color: transparent;
+  --md-default-fg-color: #1e293b;
+  --md-default-fg-color--light: #475569;
+}
+
+/* ---------- Ссылки ---------- */
+.md-typeset a {
+  color: var(--md-accent-fg-color);
+}
+.md-typeset a:hover {
+  opacity: 0.85;
+}
+
+/* ---------- Светлый нейронный фон страницы ---------- */
+.md-main {
+  position: relative;
+}
+
+.md-main::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(700px 360px at 15% 5%, rgba(54, 200, 255, 0.18), transparent 65%),
+    radial-gradient(600px 320px at 85% 15%, rgba(11, 87, 208, 0.16), transparent 65%),
+    linear-gradient(
+      180deg,
+      #f6f9ff 0%,
+      #eef3ff 45%,
+      #e6edff 100%
+    );
+}
+
+/* ---------- Glass-карточки контента ---------- */
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset table,
+.md-typeset pre {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(54, 200, 255, 0.25);
+  border-radius: 18px;
+  box-shadow:
+    0 8px 24px rgba(11, 87, 208, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- Декоративные линии под заголовками ---------- */
+.md-typeset h1::after,
+.md-typeset h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 90px;
+  margin-top: 0.45em;
+  background: linear-gradient(
+    90deg,
+    #083A8C 0%,
+    #0B57D0 50%,
+    #36C8FF 100%
+  );
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+/* ---------- Свечение логотипа ---------- */
+.md-header__button.md-logo img {
+  filter:
+    drop-shadow(0 2px 6px rgba(54, 200, 255, 0.35))
+    drop-shadow(0 4px 12px rgba(11, 87, 208, 0.25));
+}
+
+/* =========================================================
+   SIDEBAR (NAVIGATION)
+   ========================================================= */
+
+/* Sidebar — sticky, НЕ перекрывает footer */
+@media (min-width: 76.25em) {
+  .md-sidebar--primary {
+    position: sticky;
+    top: 4.5rem;
+    align-self: flex-start;
+    z-index: 2;
+  }
+}
+
+/* Контейнер навигации */
+.md-sidebar__scrollwrap {

@@ -1,1 +1,15 @@
-site_name: My Dogs
+site_name: HHH.ru
+nav:
+  - Главная: index.md
+  - Контакты: about.md
+
+theme:
+  name: material
+  logo: assets/1234.png
+  favicon: assets/1234.png
+  palette:
+    - scheme: default
+      primary: black
+      accent: blue
+extra_css:
+  - stylesheets/extra.css
