@@ -62,6 +62,10 @@
     inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
+.md-header__button.md-logo img {
+  height: 56px;        /* ← увеличь (например: 56px, 64px) */
+  width: auto;
+}
 /* ---------- Декоративные линии под заголовками ---------- */
 .md-typeset h1::after,
 .md-typeset h2::after {
