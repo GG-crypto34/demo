@@ -2,6 +2,7 @@ site_name: HHH.ru
 nav:
   - Главная: index.md
   - Контакты: about.md
+  - sebasu: sebasu.md
 
 theme:
   name: material
